@@ -5,7 +5,7 @@ const Searcher = () => {
   return (
     <Stack w={"100%"} pt={"40px"}>
       <Input
-        alignContent={"center"}
+        alignSelf={"center"}
         w={"50%"}
         placeholder="Search a movie"
       ></Input>
