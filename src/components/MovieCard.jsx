@@ -3,13 +3,16 @@ import { Box, VStack, Text, Image } from "@chakra-ui/react";
 
 const MovieCard = ({ movie }) => {
   return (
-    <Box bg="white" mb="10px">
+    <Box mb="10px">
       <VStack>
-        <Text color={"black"}>Title: {movie.original_title}</Text>
         <Image
+          borderRadius="md"
           src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
           alt="image"
-        ></Image>
+        />
+        <Text color={"white"} textAlign="center">
+          Title: {movie.original_title}
+        </Text>
       </VStack>
     </Box>
   );
