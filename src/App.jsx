@@ -7,7 +7,7 @@ import Searcher from "./components/Searcher";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
-  const [page, setPage] = useState(3);
+  const [page, setPage] = useState(1);
   const [pages, setPages] = useState([]);
 
   const [filtedMovies, setFiltedMovies] = useState(movies);
