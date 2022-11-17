@@ -1,18 +1,23 @@
+import { Stack } from "@chakra-ui/react";
 import React from "react";
 import MovieCard from "./MovieCard";
-import { Stack, Box } from "@chakra-ui/react";
 
 const Movies = ({ movies }) => {
   return (
     <Stack
-      p={30}
       w="100%"
       display={"flex"}
-      justifyContent="space-around"
+      justifyContent="space-between"
       direction="row"
+      mt={10}
       flexWrap={"wrap"}
     >
-      {movies && movies.map((movie) => <MovieCard movie={movie}></MovieCard>)}
+      {movies &&
+        movies.map((movie, key) => (
+          <Stack p={4} index={key} w={"30%"}>
+            <MovieCard movie={movie}></MovieCard>
+          </Stack>
+        ))}
     </Stack>
   );
 };
